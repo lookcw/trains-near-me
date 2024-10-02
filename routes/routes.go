@@ -1,17 +1,17 @@
 package routes
 
 import (
-    "github.com/gin-gonic/gin"
-    "trains-near-me/handlers"
-)
+	"trains-near-me/handlers"
 
+	"github.com/gin-gonic/gin"
+)
 
 func SetupRouter() *gin.Engine {
 
 	router := gin.Default()
 
-	router.GET("/",handlers.HomeHandler)
+	router.GET("/", handlers.HomeHandler)
+	router.GET("/test", handlers.TestHandler)
 	return router
-	
-}
 
+}
